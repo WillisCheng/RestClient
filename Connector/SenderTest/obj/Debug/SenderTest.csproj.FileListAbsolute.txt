@@ -22,3 +22,4 @@ C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\Connector\SenderTest\obj
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\Connector\SenderTest\obj\Debug\HeaderControl.g.cs
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\Connector\SenderTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\Connector\SenderTest\obj\Debug\SenderTest_MarkupCompile.lref
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderTest\bin\Debug\SenderTest.exe.config

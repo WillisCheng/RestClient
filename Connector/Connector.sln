@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderTest", "SenderTest\Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderHistory", "SenderHistory\SenderHistory.csproj", "{DD0C1572-B7B6-423A-B34F-C7AC1D0F3F53}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0C1572-B7B6-423A-B34F-C7AC1D0F3F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0C1572-B7B6-423A-B34F-C7AC1D0F3F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0C1572-B7B6-423A-B34F-C7AC1D0F3F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0C1572-B7B6-423A-B34F-C7AC1D0F3F53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
