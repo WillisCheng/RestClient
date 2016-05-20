@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenderTest", "SenderTest\SenderTest.csproj", "{DFE940A5-0272-44CA-960C-949B49460BB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DFE940A5-0272-44CA-960C-949B49460BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE940A5-0272-44CA-960C-949B49460BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFE940A5-0272-44CA-960C-949B49460BB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DD250C1-0451-4B8D-BDE1-8C0F2663ED3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

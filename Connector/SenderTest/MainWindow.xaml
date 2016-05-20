@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:senderTest="clr-namespace:SenderTest"
         x:Class="SenderTest.MainWindow"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="600" Width="800" DataContext="{Binding ViewModel}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -22,7 +22,7 @@
                 <ComboBoxItem Content="PUT"/>
                 <ComboBoxItem Content="DELETE"/>
             </ComboBox>
-            <TextBox Grid.Column="1" Name="TxtUri" BorderThickness="5" Text="http://luis-async.test.expedia.com/events/SkuGroupLog"/>
+            <TextBox Grid.Column="1" Name="TxtUri" BorderThickness="5" Text="{Binding Uri}"/>
             <Button Grid.Column="2" Content="Send" Height="22" HorizontalAlignment="Left" Margin="10,0" Width="78" Click="Button_Click"/>
         </Grid>
         <TabControl Grid.Row="1" SelectedIndex="1" Margin="5">
