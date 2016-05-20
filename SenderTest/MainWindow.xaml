@@ -1,0 +1,104 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:senderTest="clr-namespace:SenderTest"
+        x:Class="SenderTest.MainWindow" Loaded="Window_Loaded"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Height="30" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Column="0" SelectedItem="{Binding Method}" ItemsSource="{Binding SupportedMethods}" Height="22" HorizontalAlignment="Center" >
+            </ComboBox>
+            <TextBox Grid.Column="1" BorderThickness="5" Text="{Binding Uri}"/>
+            <Button Grid.Column="2" Content="Send" Height="22" HorizontalAlignment="Left" Margin="10,0" Width="78" Click="Button_Click"/>
+        </Grid>
+        <TabControl Grid.Row="1" SelectedIndex="1" Margin="5">
+            <TabItem Header="Authorization" Visibility="Collapsed"/>
+            <TabItem>
+                <TabItem.Header>
+                    <Label Width="80" FontWeight="Bold">Headers</Label>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <ListView Visibility="Collapsed">
+                        <senderTest:HeaderControl  Width="350" IsChecked="True" HeaderKey="Content-Type" HeaderValue="application/json">
+                            </senderTest:HeaderControl>
+                        <senderTest:HeaderControl  Width="350">
+                            </senderTest:HeaderControl>
+                    </ListView>
+                    <TextBox TextWrapping="Wrap" Text="{Binding RequestHeaders}" AcceptsReturn="True" Grid.Column="1" >
+                        
+                    </TextBox>
+                </Grid>
+                
+            </TabItem>
+            <TabItem >
+                <TabItem.Header>
+                    <Label Width="80" FontWeight="Bold">Body</Label>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Height="30" Orientation="Horizontal" Visibility="Collapsed">
+                        <RadioButton Visibility="Collapsed">from-data</RadioButton>
+                        <RadioButton Margin="3" VerticalAlignment="Center" IsChecked="True">raw</RadioButton>
+                        <ComboBox Margin="3" Height="22" HorizontalAlignment="Center" SelectedIndex="1">
+                            <ComboBoxItem Content="text/plain"/>
+                            <ComboBoxItem Content="application/json"/>
+                            <ComboBoxItem Content="application/xml"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <TextBox Text="{Binding RequestContent}" TextWrapping="Wrap" AcceptsReturn="True" Grid.Row="1">
+                        
+                    </TextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TabControl Grid.Row="2" SelectedIndex="0">
+            <TabItem>
+                <TabItem.Header>
+                    <Label Width="80" FontWeight="Bold">Body</Label>
+                </TabItem.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Width="50" HorizontalContentAlignment="Right">Status:</Label>
+                        <Label Width="150" HorizontalContentAlignment="Left" Content="{Binding StatusCode}"></Label>
+                        <Label Width="50" HorizontalContentAlignment="Right">Time:</Label>
+                        <Label Width="150" HorizontalContentAlignment="Left" Content="{Binding Duration}" ></Label>
+                    </StackPanel>
+                    <TextBox TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" Grid.Row="1" Text="{Binding ResponseContent}">
+                        
+                    </TextBox>
+                </Grid>
+            </TabItem>
+            <TabItem >
+                <TabItem.Header>
+                    <Label Width="80" FontWeight="Bold">Headers</Label>
+                </TabItem.Header>
+                <TextBox TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" ></TextBox>
+            </TabItem>
+        </TabControl>
+
+
+
+
+    </Grid>
+</Window>

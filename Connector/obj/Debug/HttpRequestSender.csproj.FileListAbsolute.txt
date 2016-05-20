@@ -1,0 +1,10 @@
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\HttpRequestSender.dll
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\HttpRequestSender.pdb
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\obj\Debug\HttpRequestSender.dll
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\obj\Debug\HttpRequestSender.pdb
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\Extensions.dll
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\Serialization.dll
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\Newtonsoft.Json.dll
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\Extensions.pdb
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\bin\Debug\Serialization.pdb
+c:\users\v-rcheng\documents\visual studio 2013\Projects\Connector\Connector\obj\Debug\HttpRequestSender.csprojResolveAssemblyReference.cache
