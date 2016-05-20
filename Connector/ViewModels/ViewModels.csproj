@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="Constans.cs" />
+    <Compile Include="HeaderMap.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="SenderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,14 +4,34 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text;
 
 namespace ViewModels
 {
     public class SenderViewModel : BaseViewModel
     {
-        public readonly ObservableCollection<Tuple<string, string>> RequestHeaders = new ObservableCollection<Tuple<string, string>>();
+        private readonly ObservableCollection<HeaderMap> RequestHeadersForm = new ObservableCollection<HeaderMap>();
 
-        public Dictionary<string, string> ResponseHeaders { get; set; }
+        public string RequestHeaders
+        {
+            get
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in RequestHeadersForm)
+                {
+                    sb.AppendLine(item.ToString());
+                }
+                return sb.ToString();
+            }
+            set
+            {
+                RequestHeadersForm.Clear();
+                LoadRequestHeaders(value);
+            }
+        }
+
+        public string ResponseHeaders { get; set; }
+
         private string _uri;
 
         public string Uri
@@ -23,6 +43,8 @@ namespace ViewModels
                 OnPropertyChanged();
             }
         }
+
+        public ObservableCollection<string> SupportedMethods { get; set; }
 
         public string _method;
 
@@ -86,13 +108,38 @@ namespace ViewModels
 
         public SenderViewModel()
         {
-            ResponseHeaders = new Dictionary<string, string>();
+            RequestHeadersForm.Add(HeaderMap.Default);
+            SupportedMethods = new ObservableCollection<string>(Enum.GetNames(typeof(HttpMethod)));
+            Method = HttpMethod.GET.ToString();
+        }
+
+        private void LoadRequestHeaders(string requestHeaders)
+        {
+            if (string.IsNullOrWhiteSpace(requestHeaders)) return;
+            var headers = requestHeaders.Trim().Split('\r', '\t');
+            foreach (var header in headers)
+            {
+                var item = header.Split(':');
+                if (item.Length == 2)
+                {
+                    var key = item[0].Replace("\n", "").Trim();
+                    var headerItem = RequestHeadersForm.FirstOrDefault(c => c.Key.Equals(key, StringComparison.OrdinalIgnoreCase));
+                    if (headerItem != null)
+                    {
+                        headerItem.Value = item[1];
+                    }
+                    else
+                    {
+                        RequestHeadersForm.Add(new HeaderMap { Key = key, Value = item[1] });
+                    }
+                }
+            }
         }
 
         public void Send()
         {
             var connector = new Connector(Uri, Method);
-            var requestHeaders = RequestHeaders.ToDictionary(item => item.Item1, item => item.Item2);
+            var requestHeaders = RequestHeadersForm.ToDictionary(item => item.Key, item => item.Value);
             var contentType = requestHeaders.GetValue("Content-Type", StringComparer.OrdinalIgnoreCase);
             var requestContent = new RequestContent(RequestContent, contentType)
             {
@@ -103,12 +150,23 @@ namespace ViewModels
             var end = DateTime.Now;
             StatusCode = response.StatusCode;
             Duration = (end - start).Milliseconds;
-            ResponseContent = response.Raw;
-            ResponseHeaders.Clear();
-            foreach (var header in response.Headers)
+            LoadResponseBody(response.Raw);
+            LoadResponseHeaders(response.Headers);
+        }
+
+        private void LoadResponseBody(string content)
+        {
+            ResponseContent = content;
+        }
+
+        private void LoadResponseHeaders(IDictionary<string, string> headers)
+        {
+            var sbResponseHeader = new StringBuilder();
+            foreach (var header in headers)
             {
-                ResponseHeaders.Add(header.Key, header.Value);
+                sbResponseHeader.AppendLine(header.ToString());
             }
+            ResponseHeaders = sbResponseHeader.ToString();
         }
     }
 }

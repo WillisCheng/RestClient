@@ -101,14 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Connector\HttpRequestSender.csproj">
-      <Project>{3dd23f61-57e1-48e4-99cf-559e94fb84b1}</Project>
-      <Name>HttpRequestSender</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Extensions\Extensions.csproj">
-      <Project>{a358f051-4b52-42d3-bdd0-66145de1fb3c}</Project>
-      <Name>Extensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ViewModels\ViewModels.csproj">
       <Project>{8dd250c1-0451-4b8d-bde1-8c0f2663ed3f}</Project>
       <Name>ViewModels</Name>

@@ -1,5 +1,4 @@
-﻿using System;
-using Extensions;
+﻿using Extensions;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
@@ -36,7 +35,7 @@ namespace HttpRequestSender
                 }
                 Raw = Encoding.UTF8.GetString(responseByte);
             }
-            catch(InvalidDataException)
+            catch (InvalidDataException)
             {
                 Raw = Encoding.UTF8.GetString(response);
             }
