@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseViewModel.cs" />
+    <Compile Include="ConnectHistoryViewModel.cs" />
     <Compile Include="Constans.cs" />
     <Compile Include="HeaderMap.cs" />
     <Compile Include="Properties\Annotations.cs" />
@@ -55,6 +56,10 @@
     <ProjectReference Include="..\Extensions\Extensions.csproj">
       <Project>{a358f051-4b52-42d3-bdd0-66145de1fb3c}</Project>
       <Name>Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SenderHistory\SenderHistory.csproj">
+      <Project>{dd0c1572-b7b6-423a-b34f-c7ac1d0f3f53}</Project>
+      <Name>SenderHistory</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
