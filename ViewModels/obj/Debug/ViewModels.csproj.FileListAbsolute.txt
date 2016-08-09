@@ -3,7 +3,6 @@ C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\Vie
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\Extensions.dll
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\HttpRequestSender.dll
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\SenderHistory.dll
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\Newtonsoft.Json.dll
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\HttpRequestSender.pdb
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\Extensions.pdb
 C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\ViewModels\bin\Debug\SenderHistory.pdb

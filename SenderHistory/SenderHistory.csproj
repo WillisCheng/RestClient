@@ -41,9 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HistoryEntity.cs" />
-    <Compile Include="JsonFile\JsonHistoryReader.cs" />
     <Compile Include="JsonFile\History.cs" />
-    <Compile Include="IHistoryReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
