@@ -1,8 +1,0 @@
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\bin\Debug\SenderHistory.dll
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\bin\Debug\SenderHistory.pdb
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\bin\Debug\Extensions.dll
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\bin\Debug\Newtonsoft.Json.dll
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\bin\Debug\Extensions.pdb
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.csprojResolveAssemblyReference.cache
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.dll
-C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.pdb
