@@ -42,15 +42,23 @@
     <Compile Include="BodyBuilder.cs" />
     <Compile Include="Charset.cs" />
     <Compile Include="HeadersBuilder.cs" />
-    <Compile Include="HttpEntity.cs" />
+    <Compile Include="HttpEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="HttpHeaders.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="HttpMethod.cs" />
-    <Compile Include="MediaType.cs" />
+    <Compile Include="MediaType.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestEntity.cs" />
-    <Compile Include="ResponseEntity.cs" />
+    <Compile Include="RequestEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResponseEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RestOperations.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

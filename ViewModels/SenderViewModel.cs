@@ -1,5 +1,5 @@
 ﻿using Extensions;
-using HttpRequestSender;
+using WebClient;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
