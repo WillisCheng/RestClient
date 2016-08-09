@@ -1,0 +1,4 @@
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\WebClient\bin\Debug\WebClient.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\WebClient\bin\Debug\WebClient.pdb
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\WebClient\obj\Debug\WebClient.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\WebClient\obj\Debug\WebClient.pdb

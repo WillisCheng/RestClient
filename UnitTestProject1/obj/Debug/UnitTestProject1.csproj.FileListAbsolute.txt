@@ -1,0 +1,7 @@
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\bin\Debug\WebClient.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\bin\Debug\WebClient.pdb
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

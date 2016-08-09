@@ -1,0 +1,3 @@
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.csprojResolveAssemblyReference.cache
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.dll
+C:\Users\v-rcheng\Documents\Visual Studio 2013\Projects\RestClient\Connector\SenderHistory\obj\Debug\SenderHistory.pdb
