@@ -4,10 +4,7 @@ namespace Serialization
 {
     public interface ISerializer
     {
-        string ContentType
-        {
-            get;
-        }
+        string ContentType { get; }
 
         object Deserialize(Type returnType, byte[] bytes);
 

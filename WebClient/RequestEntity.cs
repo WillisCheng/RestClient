@@ -13,16 +13,16 @@ namespace WebClient
 
     public class RequestEntity<T> : HttpEntity<T> where T : class
     {
-        public HttpMethod method { get; private set; }
-
-        public Uri uri { get; private set; }
-
         public RequestEntity(HttpMethod method, Uri uri, NameValueCollection headers = null, T body = default(T))
             : base(headers, body)
         {
             this.uri = uri;
             this.method = method;
         }
+
+        public HttpMethod method { get; private set; }
+
+        public Uri uri { get; private set; }
 
         public static BodyBuilder Method(HttpMethod method, Uri uri)
         {

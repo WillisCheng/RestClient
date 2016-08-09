@@ -1,14 +1,14 @@
-﻿using Extensions;
-using System;
+﻿using System;
 using System.IO;
 using System.Net;
+using Extensions;
 
 namespace HttpRequestSender
 {
     public class Connector
     {
-        private readonly string _uri;
         private readonly string _method;
+        private readonly string _uri;
 
         private HttpWebRequest _httpWebRequest;
 

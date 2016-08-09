@@ -84,8 +84,8 @@ namespace SenderHistory.JsonFile
         public Guid id { get; set; }
         public string name { get; set; }
         public List<Value> values { get; set; }
-        //public string team { get; set; }
         //public long timestamp { get; set; }
+        //public string team { get; set; }
     }
 
     public class Value
@@ -101,7 +101,7 @@ namespace SenderHistory.JsonFile
         public int version { get; set; }
         public List<Collection> collections { get; set; }
         public List<Environment> environments { get; set; }
-        //public List<object> headerPresets { get; set; }
         //public List<object> globals { get; set; }
+        //public List<object> headerPresets { get; set; }
     }
 }

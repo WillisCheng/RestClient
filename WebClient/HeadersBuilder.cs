@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WebClient
+﻿namespace WebClient
 {
     public interface HeadersBuilder<out Body> : HeadersBuilder
     {
@@ -12,7 +10,7 @@ namespace WebClient
 
         Body IfModifiedSince(long ifModifiedSince);
 
-        Body IfNoneMatch(params String[] ifNoneMatches);
+        Body IfNoneMatch(params string[] ifNoneMatches);
     }
 
     public interface HeadersBuilder

@@ -1,9 +1,9 @@
-﻿using Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Extensions;
 using HttpRequestSender;
 
 namespace ViewModels
@@ -12,11 +12,30 @@ namespace ViewModels
     {
         private readonly ObservableCollection<HeaderMap> RequestHeadersForm = new ObservableCollection<HeaderMap>();
 
+        private int _duration;
+
+        public string _method;
+
+        private string _requestContent;
+
+        private string _responseContent;
+
+        private int _statusCode;
+
+        private string _uri;
+
+        public SenderViewModel()
+        {
+            RequestHeadersForm.Add(HeaderMap.Default);
+            SupportedMethods = new ObservableCollection<string>(Enum.GetNames(typeof(HttpMethod)));
+            Method = HttpMethod.GET.ToString();
+        }
+
         public string RequestHeaders
         {
             get
             {
-                StringBuilder sb = new StringBuilder();
+                var sb = new StringBuilder();
                 foreach (var item in RequestHeadersForm)
                 {
                     sb.AppendLine(item.ToString());
@@ -32,8 +51,6 @@ namespace ViewModels
 
         public string ResponseHeaders { get; set; }
 
-        private string _uri;
-
         public string Uri
         {
             get { return _uri; }
@@ -46,8 +63,6 @@ namespace ViewModels
 
         public ObservableCollection<string> SupportedMethods { get; set; }
 
-        public string _method;
-
         public string Method
         {
             get { return _method; }
@@ -57,8 +72,6 @@ namespace ViewModels
                 OnPropertyChanged();
             }
         }
-
-        private string _requestContent;
 
         public string RequestContent
         {
@@ -70,8 +83,6 @@ namespace ViewModels
             }
         }
 
-        private int _statusCode;
-
         public int StatusCode
         {
             get { return _statusCode; }
@@ -81,8 +92,6 @@ namespace ViewModels
                 OnPropertyChanged();
             }
         }
-
-        private int _duration;
 
         public int Duration
         {
@@ -94,8 +103,6 @@ namespace ViewModels
             }
         }
 
-        private string _responseContent;
-
         public string ResponseContent
         {
             get { return _responseContent; }
@@ -104,13 +111,6 @@ namespace ViewModels
                 _responseContent = value;
                 OnPropertyChanged();
             }
-        }
-
-        public SenderViewModel()
-        {
-            RequestHeadersForm.Add(HeaderMap.Default);
-            SupportedMethods = new ObservableCollection<string>(Enum.GetNames(typeof(HttpMethod)));
-            Method = HttpMethod.GET.ToString();
         }
 
         private void LoadRequestHeaders(string requestHeaders)
@@ -123,14 +123,15 @@ namespace ViewModels
                 if (item.Length == 2)
                 {
                     var key = item[0].Replace("\n", "").Trim();
-                    var headerItem = RequestHeadersForm.FirstOrDefault(c => c.Key.Equals(key, StringComparison.OrdinalIgnoreCase));
+                    var headerItem =
+                        RequestHeadersForm.FirstOrDefault(c => c.Key.Equals(key, StringComparison.OrdinalIgnoreCase));
                     if (headerItem != null)
                     {
                         headerItem.Value = item[1];
                     }
                     else
                     {
-                        RequestHeadersForm.Add(new HeaderMap { Key = key, Value = item[1] });
+                        RequestHeadersForm.Add(new HeaderMap {Key = key, Value = item[1]});
                     }
                 }
             }

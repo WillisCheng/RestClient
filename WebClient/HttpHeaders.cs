@@ -80,8 +80,8 @@ namespace WebClient
 
         public IEnumerable<MediaType> GetAccept()
         {
-            List<MediaType> acceptableMediaTypes = new List<MediaType>();
-            string value = Get(ACCEPT);
+            var acceptableMediaTypes = new List<MediaType>();
+            var value = Get(ACCEPT);
 
             //List<MediaType> result = (value != null ? MediaType.parseMediaTypes(value) : Collections.<MediaType>emptyList());
 
@@ -107,7 +107,7 @@ namespace WebClient
 
         public IEnumerable<Charset> GetAcceptCharset()
         {
-            List<Charset> result = new List<Charset>();
+            var result = new List<Charset>();
             //String value = getFirst(ACCEPT_CHARSET);
             //if (value != null) {
             //    String[] tokens = value.split(",\\s*");

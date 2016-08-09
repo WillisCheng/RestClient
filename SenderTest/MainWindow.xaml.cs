@@ -5,7 +5,7 @@ using ViewModels;
 namespace SenderTest
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
@@ -16,14 +16,8 @@ namespace SenderTest
 
         public SenderViewModel ViewModel
         {
-            get
-            {
-                return DataContext as SenderViewModel;
-            }
-            set
-            {
-                DataContext = value;
-            }
+            get { return DataContext as SenderViewModel; }
+            set { DataContext = value; }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

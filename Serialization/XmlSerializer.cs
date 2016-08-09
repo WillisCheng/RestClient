@@ -9,10 +9,7 @@ namespace Serialization
 
         public string ContentType
         {
-            get
-            {
-                return ContentTypeForXml;
-            }
+            get { return ContentTypeForXml; }
         }
 
         public byte[] Serialize(object objectRoot, Type objectType)
@@ -21,6 +18,17 @@ namespace Serialization
             using (var memoryStream = SerializeToStream(objectRoot, objectType))
             {
                 result = memoryStream.ToArray();
+            }
+            return result;
+        }
+
+        public object Deserialize(Type returnType, byte[] bytes)
+        {
+            var xmlSerializer = new System.Xml.Serialization.XmlSerializer(returnType);
+            object result;
+            using (var memoryStream = new MemoryStream(bytes))
+            {
+                result = xmlSerializer.Deserialize(memoryStream);
             }
             return result;
         }
@@ -38,17 +46,6 @@ namespace Serialization
         {
             var xmlSerializer = new System.Xml.Serialization.XmlSerializer(returnType);
             return xmlSerializer.Deserialize(strm);
-        }
-
-        public object Deserialize(Type returnType, byte[] bytes)
-        {
-            var xmlSerializer = new System.Xml.Serialization.XmlSerializer(returnType);
-            object result;
-            using (var memoryStream = new MemoryStream(bytes))
-            {
-                result = xmlSerializer.Deserialize(memoryStream);
-            }
-            return result;
         }
     }
 }

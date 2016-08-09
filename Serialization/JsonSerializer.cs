@@ -9,36 +9,33 @@ namespace Serialization
     {
         public string ContentType
         {
-            get
-            {
-                return "application/json";
-            }
+            get { return "application/json"; }
         }
 
         public byte[] Serialize(object objectRoot, Type objectType)
         {
-            return Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(objectRoot,  Formatting.Indented));
-        }
-
-        public object Deserialize(Type returnType, Stream strm)
-        {
-            object result;
-            using (StreamReader streamReader = new StreamReader(strm))
-            {
-                result = JsonConvert.DeserializeObject(streamReader.ReadToEnd(), returnType, new JsonSerializerSettings
-                {
-                    NullValueHandling = NullValueHandling.Ignore
-                });
-            }
-            return result;
+            return Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(objectRoot, Formatting.Indented));
         }
 
         public object Deserialize(Type returnType, byte[] bytes)
         {
             object result;
-            using (MemoryStream memoryStream = new MemoryStream(bytes))
+            using (var memoryStream = new MemoryStream(bytes))
             {
                 result = Deserialize(returnType, memoryStream);
+            }
+            return result;
+        }
+
+        public object Deserialize(Type returnType, Stream strm)
+        {
+            object result;
+            using (var streamReader = new StreamReader(strm))
+            {
+                result = JsonConvert.DeserializeObject(streamReader.ReadToEnd(), returnType, new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
             }
             return result;
         }

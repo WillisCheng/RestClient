@@ -14,8 +14,6 @@ namespace WebClient
     public class HttpEntity<T>
     {
         public static readonly HttpEntity<T> EMPTY = new HttpEntity<T>();
-        public HttpHeaders headers { get; private set; }
-        public T body { get; private set; }
 
         public HttpEntity(NameValueCollection headers = null, T body = default(T))
         {
@@ -27,6 +25,9 @@ namespace WebClient
             }
             this.headers = tempHeaders;
         }
+
+        public HttpHeaders headers { get; private set; }
+        public T body { get; private set; }
 
         public override string ToString()
         {

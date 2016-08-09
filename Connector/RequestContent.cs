@@ -4,11 +4,9 @@ namespace HttpRequestSender
 {
     public class RequestContent
     {
-        public IDictionary<string, string> Headers { get; set; }
+        public readonly string ContentType;
 
         public readonly string Raw;
-
-        public readonly string ContentType;
 
         private RequestContent(string contentType)
         {
@@ -20,5 +18,7 @@ namespace HttpRequestSender
         {
             Raw = request;
         }
+
+        public IDictionary<string, string> Headers { get; set; }
     }
 }

@@ -1,19 +1,16 @@
-﻿using Extensions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Text;
+using Extensions;
 
 namespace HttpRequestSender
 {
     public class ResponseContent
     {
-        public IDictionary<string, string> Headers { get; set; }
-        public int StatusCode { get; set; }
+        public readonly string ContentType;
 
         public readonly string Raw;
-
-        public readonly string ContentType;
 
         private ResponseContent(string contentType)
         {
@@ -47,5 +44,8 @@ namespace HttpRequestSender
                 }
             }
         }
+
+        public IDictionary<string, string> Headers { get; set; }
+        public int StatusCode { get; set; }
     }
 }

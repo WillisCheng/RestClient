@@ -11,11 +11,10 @@ namespace WebClient
 
     public class DefaultBodyBuilder : BodyBuilder
     {
+        private readonly HttpHeaders headers = new HttpHeaders();
         private readonly HttpMethod method;
 
         private readonly Uri uri;
-
-        private readonly HttpHeaders headers = new HttpHeaders();
 
         public DefaultBodyBuilder(HttpMethod method, Uri uri)
         {
@@ -23,7 +22,7 @@ namespace WebClient
             this.uri = uri;
         }
 
-        public BodyBuilder Header(String headerName, params String[] headerValues)
+        public BodyBuilder Header(string headerName, params string[] headerValues)
         {
             foreach (var headerValue in headerValues)
             {
@@ -62,7 +61,7 @@ namespace WebClient
             return this;
         }
 
-        public BodyBuilder IfNoneMatch(params String[] ifNoneMatches)
+        public BodyBuilder IfNoneMatch(params string[] ifNoneMatches)
         {
             headers.SetIfNoneMatch(ifNoneMatches);
             return this;

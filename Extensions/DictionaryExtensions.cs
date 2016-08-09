@@ -29,7 +29,7 @@ namespace Extensions
         }
 
         public static TValue GetValue<TKey, TValue>(this Dictionary<TKey,
-                         TValue> dictionary, TKey key,
+            TValue> dictionary, TKey key,
             IComparer<TKey> compare)
         {
             var result = default(TValue);
